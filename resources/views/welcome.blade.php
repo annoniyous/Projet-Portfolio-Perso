@@ -1,0 +1,15 @@
+@extends('template.main')
+@section('content')
+  @include('partials.nav')
+  @include('partials.home')
+  @include('partials.about')
+  @include('partials.fact')
+  @include('partials.skills')
+  @include('partials.resume')
+  @include('partials.portfolio')
+  @include('partials.service')
+  @include('partials.skills')
+  @include('partials.testimonials')
+  @include('partials.contact')
+ 
+@endsection
