@@ -3,8 +3,8 @@
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
-        <h2>Skills</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        <h2>{{$sectiontitle[4]->title}}</h2>
+        <p>{{$sectiontitle[4]->text}}</p>
       </div>
 
       <div class="row skills-content">
