@@ -9,7 +9,9 @@ use App\Models\Headtiltle;
 use App\Models\Secondtitle;
 use App\Models\Socialicone;
 use App\Models\Sectiontiltle;
-
+use App\Models\Aboutdescription;
+use App\Models\Aboutimg;
+use App\Models\Aboutli;
 
 
 class FrontsideController extends Controller
@@ -26,10 +28,16 @@ class FrontsideController extends Controller
         $headtitle = Headtiltle::all();
         $secondtitle = Secondtitle::all();
         $socialicone = Socialicone::all();
+        // About + All titles
         $sectiontitle = Sectiontiltle::all();
+        $aboutdescription = Aboutdescription::all();
+        $aboutimg = Aboutimg::all();
+        $aboutli = Aboutli::all();
+        // Skills
+        
 
 
-        return view('welcome', compact('navlink','headtitle','secondtitle','socialicone','sectiontitle'));
+        return view('welcome', compact('navlink','headtitle','secondtitle','socialicone','sectiontitle','aboutdescription','aboutimg','aboutli'));
     }
 
     /**

@@ -1,16 +1,12 @@
 <!-- ======= Skills Section ======= -->
 <section id="skills" class="skills section-bg">
     <div class="container" data-aos="fade-up">
-
       <div class="section-title">
         <h2>{{$sectiontitle[4]->title}}</h2>
         <p>{{$sectiontitle[4]->text}}</p>
       </div>
-
       <div class="row skills-content">
-
         <div class="col-lg-6">
-
           <div class="progress">
             <span class="skill">HTML <i class="val">100%</i></span>
             <div class="progress-bar-wrap">
@@ -56,10 +52,7 @@
               <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
           </div>
-
         </div>
-
       </div>
-
     </div>
   </section><!-- End Skills Section -->

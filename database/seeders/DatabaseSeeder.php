@@ -14,11 +14,17 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
+            // Home
             NavlinkSeeder::class,
             HeadtiltleSeeder::class,
             SecondtitleSeeder::class,
             SocialiconesSeeder::class,
+            // About + all titles
             SectiontiltleSeeder::class,
+            AboutdescriptionSeeder::class,
+            AboutimgSeeder::class,
+            AboutliSeeder::class,
+            // Skills
         ]);
             
     }
