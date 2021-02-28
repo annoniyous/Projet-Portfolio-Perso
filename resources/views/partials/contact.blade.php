@@ -10,24 +10,13 @@
 
         <div class="col-lg-4">
           <div class="info">
-            <div class="address">
-              <i class="icofont-google-map"></i>
-              <h4>Location:</h4>
-              <p>A108 Adam Street, New York, NY 535022</p>
+            @foreach ($contacticones as $item)
+            <div class="{{$item->class}}">
+              <i class="{{$item->icone}}"></i>
+              <h4>{{$item->nom}}</h4>
+              <p>{{$item->contenu}}</p>
             </div>
-
-            <div class="email">
-              <i class="icofont-envelope"></i>
-              <h4>Email:</h4>
-              <p>info@example.com</p>
-            </div>
-
-            <div class="phone">
-              <i class="icofont-phone"></i>
-              <h4>Call:</h4>
-              <p>+1 5589 55488 55s</p>
-            </div>
-
+            @endforeach
           </div>
 
         </div>
@@ -36,28 +25,35 @@
 
           <form action="forms/contact.php" method="post" role="form" class="php-email-form">
             <div class="form-row">
+              @foreach ($contactform as $item)
+                  
               <div class="col-md-6 form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <input type="{{$tem->type}}" name="{{$tem->name}}" class="form-control" id="{{$tem->ida}}" placeholder="{{$tem->placeholder}}" data-rule="{{$tem->datarule}}" data-msg="{{$tem->datamsg}}" />
                 <div class="validate"></div>
               </div>
-              <div class="col-md-6 form-group">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                <div class="validate"></div>
-              </div>
+              @if ($loop->iteration %2==0 )
             </div>
+            <div class="form-row">
+              @endif
+              @endforeach
+            </div>
+
             <div class="form-group">
               <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
               <div class="validate"></div>
             </div>
+
             <div class="form-group">
               <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
               <div class="validate"></div>
             </div>
+
             <div class="mb-3">
               <div class="loading">Loading</div>
               <div class="error-message"></div>
               <div class="sent-message">Your message has been sent. Thank you!</div>
             </div>
+            
             <div class="text-center"><button type="submit">Send Message</button></div>
           </form>
 

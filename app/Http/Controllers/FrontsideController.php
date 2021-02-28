@@ -12,6 +12,12 @@ use App\Models\Sectiontiltle;
 use App\Models\Aboutdescription;
 use App\Models\Aboutimg;
 use App\Models\Aboutli;
+use App\Models\Skill;
+use App\Models\Portfolioli;
+use App\Models\Portfolioimg;
+use App\Models\Contacticone;
+use App\Models\Contactform;
+use App\Models\Contactformgroup;
 
 
 class FrontsideController extends Controller
@@ -34,10 +40,18 @@ class FrontsideController extends Controller
         $aboutimg = Aboutimg::all();
         $aboutli = Aboutli::all();
         // Skills
+        $skills = Skill::all();
+        // Portfolio
+        $portfolioli = Portfolioli::all();
+        $portfolioimg = Portfolioimg::all();
+        // Contact
+        $contacticones = Contacticone::all();
+        $contactform = Contactform::all();
+        $contactformg = Contactformgroup::all();
         
 
 
-        return view('welcome', compact('navlink','headtitle','secondtitle','socialicone','sectiontitle','aboutdescription','aboutimg','aboutli'));
+        return view('welcome', compact('navlink','headtitle','secondtitle','socialicone','sectiontitle','aboutdescription','aboutimg','aboutli','skills','portfolioli','portfolioimg','contacticones','contactform','contactformg'));
     }
 
     /**

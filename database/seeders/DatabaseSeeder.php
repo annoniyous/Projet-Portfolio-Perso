@@ -25,6 +25,12 @@ class DatabaseSeeder extends Seeder
             AboutimgSeeder::class,
             AboutliSeeder::class,
             // Skills
+            SkillSeeder::class,
+            // Portfolio
+            PortfolioliSeeder::class,
+            PortfolioimgSeeder::class,
+            ContacticoneSeeder::class,
+
         ]);
             
     }

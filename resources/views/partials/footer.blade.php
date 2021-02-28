@@ -1,18 +1,15 @@
 <div class="container">
-    <h3>Bouysantiman Youssef</h3>
+    <h3>{{$headtitle[0]->name}}</h3>
     <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
     <div class="social-links">
-      <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-      <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-      <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-      <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-      <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-    </div>
-    <div class="copyright">
-      &copy; Copyright by <strong><span>Bouysantiman Youssef</span></strong>. All Rights Reserved
+      @foreach ($socialicone as $item)
+      <a href="{{$item->href}}" class="{{$item->class}}"><i class="{{$item->icone}}"></i></a>
+      @endforeach
+    <div class="copyright mt-3">
+      &copy; Copyright by <strong><span>{{$headtitle[0]->name}}</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
      
-      Designed by <a href="https://bootstrapmade.com/">Bouysantiman Youssef</a>
+      Designed by {{$headtitle[0]->name}}
     </div>
   </div>
