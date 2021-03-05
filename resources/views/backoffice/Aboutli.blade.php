@@ -1,7 +1,5 @@
 @extends('template.second')
 @section('content')
-   @include('backoffice.partial.tableSocialicone')
- 
+   @include('backoffice.partial.tableAboutli')
   
-
 @endsection

@@ -1,13 +1,18 @@
 @extends('template.second')
 @section('content')
     <div class="container mt-5">
+
+        <h1 class="mb-5">Les About li</h1>
+        <div class="mb-5">
+            <a href="/aboutlis/create" class="btn btn-info mr-5"> Ajouter un élément</a>
+            <a href="{{route('destroyall')}}" class="btn btn-secondary ">Delete All</a>
+        </div>
         <table class="table">
             <thead>
               <tr>
                 <th scope="col">Id</th>
-                <th scope="col">Lien</th>
-                <th scope="col">class</th>
-                <th scope="col">icone</th>
+                <th scope="col">Icone</th>
+                <th scope="col">Li</th>
                 <th scope="col"> </th>
                 <th scope="col"> </th>
                 <th scope="col"> </th>
@@ -15,16 +20,15 @@
             </thead>
             <tbody>
         
-                @foreach ($socialicones as $item)
+                @foreach ($aboutlis as $item)
                     <tr>
-                        <th scope="row">{{$item->}}</th>
-                        <td>{{$item->}}</td>
-                        <td>{{$item->}}</td>
-                        <td>{{$item->}}</td>
-                        <td><a href="socialicones/{id}/edit">Edit</a></td>
+                        <th scope="row">{{$item->id}}</th>
+                        <td>{{$item->icone}}</td>
+                        <td>{{$item->li}}</td>
+                        <td><a href="/aboutlis/{{$item->id}}/edit" class="btn btn-warning">Edit</a></td>
         
                         <td>
-                          <form action="" method="POST">
+                          <form action="/aboutlis/{{$item->id}}" method="POST">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">Delete</button>
@@ -32,7 +36,7 @@
                         </td>
         
                       <td>
-                          <a class="btn btn-success" href="">show more</a>
+                          <a class="btn btn-success" href="/aboutlis/{{$item->id}}">Show more</a>
                       </td>
                     </tr>
                 @endforeach

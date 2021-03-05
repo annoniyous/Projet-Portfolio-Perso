@@ -3,20 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Models\Aboutli;
-use App\Models\Socialicone;
 use Illuminate\Http\Request;
 
-class SocialiconeController extends Controller
+class AboutliController extends Controller
 {
-    /**
+      /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $socialicones = Socialicone::all();
-        return view('backoffice.backoffice', compact('socialicones'));
+        $aboutlis = Aboutli::all();
+        return view('backoffice.Aboutli', compact('aboutlis'));
     }
 
     /**
@@ -26,7 +25,7 @@ class SocialiconeController extends Controller
      */
     public function create()
     {
-        return view('backoffice.pages.create.createSocialicone');
+        return view('backoffice.pages.create.createAboutli');
     }
 
     /**
@@ -39,15 +38,15 @@ class SocialiconeController extends Controller
     {
         // Validate
         $validation = $request->validate([
-            "href"=>'required',
-            "class"=>'required',
-            "icone"=>'required'
+            "icone"=>'required',
+            "li"=>'required'
+            
         ]);
 
-        $store = new Socialicone;
-        $store->href = $request->href;
-        $store->class = $request->class;
+        $store = new Aboutli;
         $store->icone = $request->icone;
+        $store->li = $request->li;
+       
         $store->save();
         return redirect()->back();
     }
@@ -55,70 +54,69 @@ class SocialiconeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Socialicone  $socialicone
+     * @param  \App\Models\Aboutli  $socialicone
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        $show = Socialicone::find($id);
-         return view('backoffice.pages.show.showSocialicone', compact('show'));
+        $show = Aboutli::find($id);
+         return view('backoffice.pages.show.showAboutli', compact('show'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Socialicone  $socialicone
+     * @param  \App\Models\Aboutli  $socialicone
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        $edit = Socialicone::find($id);
-        return view('backoffice.pages.edit.editSocialicone', compact('edit'));
+        $edit = Aboutli::find($id);
+        return view('backoffice.pages.edit.editAboutli', compact('edit'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Socialicone  $socialicone
+     * @param  \App\Models\Aboutli  $socialicone
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
         // Validate
         $validation = $request->validate([
-            "href"=>'required',
-            "class"=>'required',
-            "icone"=>'required'
+            "icone"=>'required',
+            "li"=>'required',
+            
         ]);
 
-        $update = Socialicone::find($id);
-        $update->href = $request->href;
-        $update->class = $request->class;
+        $update = Aboutli::find($id);
         $update->icone = $request->icone;
+        $update->li = $request->li;
         $update->save();
-        return redirect('/socialicones');
+        return redirect('/aboutlis');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Socialicone  $socialicone
+     * @param  \App\Models\Aboutli  $socialicone
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $destroy = Socialicone::find($id);
+        $destroy = Aboutli::find($id);
         $destroy->delete();
-        return redirect('/socialicones');
+        return redirect('/aboutlis');
     }
-    public function destroyAllSocialicones()
+    public function destroyAllAboulis()
     {
-        $destroyall = Socialicone::all();
+        $destroyall = Aboutli::all();
         foreach ($destroyall as $destroy){
             $destroy->delete();
         }
-        return redirect('/socialicones');
+        return redirect('/aboutlis');
         
         
     }

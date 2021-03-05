@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Aboutli;
 use App\Models\Backside;
 use App\Models\Socialicone;
 use Illuminate\Http\Request;

@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Http\Controllers\AboutliController;
 use App\Http\Controllers\FrontsideController;
 use App\Http\Controllers\SocialiconeController;
 use Illuminate\Support\Facades\Route;
@@ -20,7 +20,8 @@ Route::get('/', [FrontsideController::class, 'index']);
 // Methode 2: créé seulement une ressource et voir dans le terminal le tableau pour les routes
 Route::get('/delete-all',[SocialiconeController::class, 'destroyAllSocialicones'])->name('destroyall');
 Route::resource('socialicones', SocialiconeController::class);
-// Route::resource('aboutlis', Controller::class);
+Route::get('/delete-all',[AboutliController::class, 'destroyAllAboulis'])->name('destroyall');
+Route::resource('aboutlis', AboutliController::class);
 // Route::resource('skillslis', BacksideController::class);
 // Route::resource('porfolioimgs', BacksideController::class);
 // Route::resource('contacticones', BacksideController::class);
