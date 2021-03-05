@@ -1,13 +1,21 @@
-<div class="container mt-5 pt-5">
-    <div class="py-3 px-4">
-        <div class="card text-center" style="width: 30rem;">
-            <div class="card-body">
-            <h4 class="card-title"></h4>
-            <h4 class="card-subtitle mb-2 "></h4>
-            <h4 class="card-title"></h4>
-            <h4 class="card-subtitle mb-2 "></h4>
-            <a href="/backoffice" class="card-link"></a>
-            </div>
+@extends('template.second')
+@section('content')
+<div class="container mb-5 mt-5">
+    <h1>Aperçu du contenu</h1>
+
+    <div class="card mt-5">
+        <div class="card-body elegant-color white-text rounded-bottom text-center">
+            <h3 class="card-title">Id: {{$show->id}}</h3>
+            <hr class="hr-light">
+            <h3 class="card-title">Nom: {{$show->pourcent}}</h3>
+            <hr class="hr-light">
+            <h3 class="card-title">Li: {{$show->airav}}</h3>
+            <hr class="hr-light">
+            <h3 class="card-title">Li: {{$show->airam}}</h3>
+           
         </div>
-    </div>
+  </div>
+
 </div>
+    
+@endsection
