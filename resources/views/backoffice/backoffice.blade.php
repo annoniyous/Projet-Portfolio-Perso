@@ -1,4 +1,7 @@
 @extends('template.second')
 @section('content')
-   @include('backoffice.pages.create.socialicone')
+   @include('backoffice.partial.tableSocialicone')
+   {{-- @include('backoffice.partial.table') --}}
+  
+
 @endsection

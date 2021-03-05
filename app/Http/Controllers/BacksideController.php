@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Backside;
+use App\Models\Socialicone;
 use Illuminate\Http\Request;
 
 class BacksideController extends Controller
@@ -14,7 +15,8 @@ class BacksideController extends Controller
      */
     public function index()
     {
-        return view('backoffice.backoffice');
+        $socialicones = Socialicone::all();
+        return view('backoffice.backoffice', compact('socialicones'));
     }
 
     /**
@@ -44,7 +46,7 @@ class BacksideController extends Controller
      * @param  \App\Models\Backside  $backside
      * @return \Illuminate\Http\Response
      */
-    public function show(Backside $backside)
+    public function show()
     {
         //
     }
@@ -55,7 +57,7 @@ class BacksideController extends Controller
      * @param  \App\Models\Backside  $backside
      * @return \Illuminate\Http\Response
      */
-    public function edit(Backside $backside)
+    public function edit()
     {
         //
     }
@@ -67,7 +69,7 @@ class BacksideController extends Controller
      * @param  \App\Models\Backside  $backside
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Backside $backside)
+    public function update(Request $request)
     {
         //
     }
@@ -78,7 +80,7 @@ class BacksideController extends Controller
      * @param  \App\Models\Backside  $backside
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Backside $backside)
+    public function destroy()
     {
         //
     }
