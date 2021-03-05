@@ -1,6 +1,6 @@
 <!-- ======= Contact Section ======= -->
 <section id="contact" class="contact">
-    <div class="container" data-aos="fade-up">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
 
       <div class="section-title">
         <h2>{{$sectiontitle[5]->title}}</h2>
@@ -28,7 +28,7 @@
               @foreach ($contactform as $item)
                   
               <div class="col-md-6 form-group">
-                <input type="{{$tem->type}}" name="{{$tem->name}}" class="form-control" id="{{$tem->ida}}" placeholder="{{$tem->placeholder}}" data-rule="{{$tem->datarule}}" data-msg="{{$tem->datamsg}}" />
+                <input type="{{$item->type}}" name="{{$item->name}}" class="form-control" id="{{$item->ida}}" placeholder="{{$item->placeholder}}" data-rule="{{$item->datarule}}" data-msg="{{$item->datamsg}}" />
                 <div class="validate"></div>
               </div>
               @if ($loop->iteration %2==0 )

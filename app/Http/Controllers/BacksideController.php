@@ -14,7 +14,7 @@ class BacksideController extends Controller
      */
     public function index()
     {
-        //
+        return view('backoffice.backoffice');
     }
 
     /**

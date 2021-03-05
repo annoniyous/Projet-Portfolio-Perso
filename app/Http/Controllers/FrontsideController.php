@@ -17,7 +17,7 @@ use App\Models\Portfolioli;
 use App\Models\Portfolioimg;
 use App\Models\Contacticone;
 use App\Models\Contactform;
-use App\Models\Contactformgroup;
+
 
 
 class FrontsideController extends Controller
@@ -47,11 +47,11 @@ class FrontsideController extends Controller
         // Contact
         $contacticones = Contacticone::all();
         $contactform = Contactform::all();
-        $contactformg = Contactformgroup::all();
+      
         
 
 
-        return view('welcome', compact('navlink','headtitle','secondtitle','socialicone','sectiontitle','aboutdescription','aboutimg','aboutli','skills','portfolioli','portfolioimg','contacticones','contactform','contactformg'));
+        return view('welcome', compact('navlink','headtitle','secondtitle','socialicone','sectiontitle','aboutdescription','aboutimg','aboutli','skills','portfolioli','portfolioimg','contacticones','contactform',));
     }
 
     /**
@@ -81,7 +81,7 @@ class FrontsideController extends Controller
      * @param  \App\Models\Frontside  $frontside
      * @return \Illuminate\Http\Response
      */
-    public function show(Frontside $frontside)
+    public function show()
     {
         //
     }
@@ -92,7 +92,7 @@ class FrontsideController extends Controller
      * @param  \App\Models\Frontside  $frontside
      * @return \Illuminate\Http\Response
      */
-    public function edit(Frontside $frontside)
+    public function edit()
     {
         //
     }
@@ -104,7 +104,7 @@ class FrontsideController extends Controller
      * @param  \App\Models\Frontside  $frontside
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Frontside $frontside)
+    public function update()
     {
         //
     }
@@ -115,7 +115,7 @@ class FrontsideController extends Controller
      * @param  \App\Models\Frontside  $frontside
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Frontside $frontside)
+    public function destroy()
     {
         //
     }

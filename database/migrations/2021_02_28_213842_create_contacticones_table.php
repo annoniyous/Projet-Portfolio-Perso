@@ -15,7 +15,7 @@ class CreateContacticonesTable extends Migration
     {
         Schema::create('contacticones', function (Blueprint $table) {
             $table->id();
-            $table->string('classe',1000);
+            $table->string('class',1000);
             $table->string('icone',1000);
             $table->string('nom',1000);
             $table->string('contenu',1000);

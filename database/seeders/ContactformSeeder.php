@@ -28,5 +28,5 @@ class ContactformSeeder extends Seeder
             'datarule'=>'email',
             'datamsg'=>'Please enter a valid email',]
             ]);
-    }
+        }
 }

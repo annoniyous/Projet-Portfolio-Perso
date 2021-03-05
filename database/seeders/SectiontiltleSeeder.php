@@ -18,7 +18,7 @@ class SectiontiltleSeeder extends Seeder
             ['title'=>"About",
             'text'=>"Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas."],
             ['title'=>"Resume",
-            'text'=>"Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas."],
+            'text'=>"En totale reconversion professionel, j'ai décidé de me challenger après la perte de mon précédent emploi en tentant une nouvelle aventure de le monde de web."],
             ['title'=>"Services",
             'text'=>"Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas."],
             ['title'=>"Portfolio",

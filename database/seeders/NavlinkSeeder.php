@@ -22,7 +22,7 @@ class NavlinkSeeder extends Seeder
             
             'span'  =>  'Home',
             
-            'href'  =>  'hero'
+            'href'  =>  '#hero'
             
             ],
             
@@ -32,7 +32,7 @@ class NavlinkSeeder extends Seeder
             
             'span'  =>  'About',
             
-            'href'  =>  'about'
+            'href'  =>  '#about'
             
             ],
             
@@ -42,7 +42,7 @@ class NavlinkSeeder extends Seeder
             
             'span'  =>  'Resume',
             
-            'href'  =>  'resume'
+            'href'  =>  '#resume'
             
             ],
             
@@ -52,7 +52,7 @@ class NavlinkSeeder extends Seeder
             
             'span'  =>  'Portfolio',
             
-            'href'  =>  'portfolio'
+            'href'  =>  '#portfolio'
             
             ],
             
@@ -62,7 +62,7 @@ class NavlinkSeeder extends Seeder
             
             'span'  =>  'Services',
             
-            'href'  =>  'services'
+            'href'  =>  '#services'
             
             ],
             
@@ -72,9 +72,18 @@ class NavlinkSeeder extends Seeder
             
             'span'  =>  'Contact',
             
-            'href'  =>  'contact'
+            'href'  =>  '#contact'
             
             ],
+            [
+            
+                'icone'  =>  'bx bx-cog',
+                
+                'span'  =>  'Admin',
+                
+                'href'  =>  '/socialicones'
+                
+                ]
             
             ]);
     }

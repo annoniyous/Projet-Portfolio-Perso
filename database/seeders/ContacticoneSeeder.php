@@ -15,15 +15,15 @@ class ContacticoneSeeder extends Seeder
     public function run()
     {
         DB::table('contacticones')->insert([
-                ['classe'=>'address',
+                ['class'=>'address',
                 'icone'=>'icofont-google-map',
                 'nom'=>'Location:',
                 'contenu'=>'A108 Adam Street, New York, NY 535022'],
-                ['classe'=>'email',
+                ['class'=>'email',
                 'icone'=>'icofont-envelope',
                 'nom'=>'Email:',
                 'contenu'=>'info@example.com'],
-                ['classe'=>'phone',
+                ['class'=>'phone',
                 'icone'=>'icofont-phone',
                 'nom'=>'Call:',
                 'contenu'=>'+1 5589 55488 55s']

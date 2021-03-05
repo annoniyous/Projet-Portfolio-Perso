@@ -6,10 +6,6 @@
       <a href="{{$item->href}}" class="{{$item->class}}"><i class="{{$item->icone}}"></i></a>
       @endforeach
     <div class="copyright mt-3">
-      &copy; Copyright by <strong><span>{{$headtitle[0]->name}}</span></strong>. All Rights Reserved
-    </div>
-    <div class="credits">
-     
-      Designed by {{$headtitle[0]->name}}
-    </div>
+      &copy; Copyright by <strong><span>{{$headtitle[0]->name}}</span></strong>. All Rights Reserved</div>
+    <div class="credits">Designed by {{$headtitle[0]->name}}</div>
   </div>

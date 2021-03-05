@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BacksideController;
 use App\Http\Controllers\FrontsideController;
 use Illuminate\Support\Facades\Route;
 
@@ -13,5 +14,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// Methode 1: taper toute les routes à la main ('edit show create et destroy ...)
 Route::get('/', [FrontsideController::class, 'index']);
+// Methode 2: créé seulement une ressource et voir dans le terminal le tableau pour les routes
+Route::resource('socialicones', BacksideController::class);
+Route::resource('aboutlis', BacksideController::class);
+Route::resource('skillslis', BacksideController::class);
+Route::resource('porfolioimgs', BacksideController::class);
+Route::resource('contacticones', BacksideController::class);
+

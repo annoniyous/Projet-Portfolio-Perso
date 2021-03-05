@@ -32,10 +32,7 @@
             </div>
           </div>
         </div>
-        @if ($loop->iteration %3==0 )
-      </div>
-      <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-        @endif
+      
         @endforeach
 
        

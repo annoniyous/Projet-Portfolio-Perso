@@ -16,28 +16,28 @@ class AboutliSeeder extends Seeder
     {
         DB::table('aboutlis')->insert([
             [ 
-                'icone'=>'Birthday:',
-                'li'=>' 1 May 1995',
+                'icone'=>'Date de naissance:',
+                'li'=>' 23 Décembre',
             ],
             [ 
                 'icone'=>'Website:',
-                'li'=>' www.example.com',
+                'li'=>' www.AllCryptoGram.com',
             ],
             [ 
-                'icone'=>'Phone:',
-                'li'=>' +123 456 7890',
+                'icone'=>'Téléphone:',
+                'li'=>' +32.48.88.884.674',
             ],
             [ 
-                'icone'=>'City:',
-                'li'=>' City : New York, USA',
+                'icone'=>'Ville:',
+                'li'=>' City : Bruxelles, Belgique',
             ],
             [ 
                 'icone'=>'Age:',
-                'li'=>' 30',
+                'li'=>' 26 ans',
             ],
             [ 
-                'icone'=>'Degree:',
-                'li'=>' Master',
+                'icone'=>'Diplôme:',
+                'li'=>' CESS',
             ],
             [ 
                 'icone'=>'PhEmailone:',
@@ -45,7 +45,7 @@ class AboutliSeeder extends Seeder
             ],
             [ 
                 'icone'=>'Freelance:',
-                'li'=>' Available',
+                'li'=>' Disponible',
             ],
             ]);
     }

@@ -30,6 +30,10 @@ class DatabaseSeeder extends Seeder
             PortfolioliSeeder::class,
             PortfolioimgSeeder::class,
             ContacticoneSeeder::class,
+            // Contact
+            ContactformSeeder::class,
+          
+
 
         ]);
             
