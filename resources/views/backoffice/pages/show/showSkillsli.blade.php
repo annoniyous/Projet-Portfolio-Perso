@@ -9,9 +9,9 @@
             <hr class="hr-light">
             <h3 class="card-title">Nom: {{$show->pourcent}}</h3>
             <hr class="hr-light">
-            <h3 class="card-title">Li: {{$show->airav}}</h3>
+            <h3 class="card-title">Attribus A: {{$show->airav}}</h3>
             <hr class="hr-light">
-            <h3 class="card-title">Li: {{$show->airam}}</h3>
+            <h3 class="card-title">Attribus B: {{$show->airam}}</h3>
            
         </div>
   </div>

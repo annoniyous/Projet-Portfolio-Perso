@@ -46,8 +46,10 @@ class SkillsliController extends Controller
         ]);
 
         $store = new Skill;
-        $store->icone = $request->icone;
-        $store->li = $request->li;
+        $store->nom = $request->nom;
+        $store->pourcent = $request->pourcent;
+        $store->airav = $request->airav;
+        $store->airam = $request->airavm;
 
         $store->save();
         return redirect()->back();
@@ -56,7 +58,7 @@ class SkillsliController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Skillsli  $socialicone
+     * @param  \App\Models\Skillsli  
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -68,7 +70,7 @@ class SkillsliController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Skillsli  $socialicone
+     * @param  \App\Models\Skillsli  
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -81,7 +83,7 @@ class SkillsliController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Skillsli  $socialicone
+     * @param  \App\Models\Skillsli  
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -97,8 +99,10 @@ class SkillsliController extends Controller
         ]);
 
         $update = Skill::find($id);
-        $update->icone = $request->icone;
-        $update->li = $request->li;
+        $update->nom = $request->nom;
+        $update->pourcent = $request->pourcent;
+        $update->airav = $request->airav;
+        $update->airam = $request->airam;
         $update->save();
         return redirect('/skillslis');
     }
@@ -106,7 +110,7 @@ class SkillsliController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Skillsli  $socialicone
+     * @param  \App\Models\Skillsli  
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

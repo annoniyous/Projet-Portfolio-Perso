@@ -4,6 +4,7 @@ use App\Http\Controllers\AboutliController;
 use App\Http\Controllers\FrontsideController;
 use App\Http\Controllers\SkillsliController;
 use App\Http\Controllers\SocialiconeController;
+use App\Http\Controllers\PortfolioimgController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,6 +26,7 @@ Route::get('/delete-all',[AboutliController::class, 'destroyAllAboulis'])->name(
 Route::resource('aboutlis', AboutliController::class);
 Route::get('/delete-all',[SkillsliController::class, 'destroyAllSkillslis'])->name('destroyall');
 Route::resource('skillslis', SkillsliController::class);
-// Route::resource('porfolioimgs', BacksideController::class);
+Route::get('/delete-all',[PortfolioimgController::class, 'destroyAllPortfolioimgs'])->name('destroyall');
+Route::resource('porfolioimgs', PortfolioimgController::class);
 // Route::resource('contacticones', BacksideController::class);
 

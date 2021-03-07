@@ -1,13 +1,22 @@
 @extends('template.second')
 @section('content')
     <div class="container mt-5">
+
+        <h1 class="mb-5">Les images de mon Potfolio</h1>
+        <div class="mb-5">
+            <a href="/portfolioimgs/create" class="btn btn-info mr-5"> Ajouter un élément</a>
+            <a href="{{route('destroyall')}}" class="btn btn-secondary ">Delete All</a>
+        </div>
         <table class="table">
             <thead>
               <tr>
                 <th scope="col">Id</th>
-                <th scope="col">Lien</th>
-                <th scope="col">class</th>
-                <th scope="col">icone</th>
+                <th scope="col">Src</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Description</th>
+                <th scope="col">Href</th>
+                <th scope="col">Filter</th>
+                <th scope="col"> </th>
                 <th scope="col"> </th>
                 <th scope="col"> </th>
                 <th scope="col"> </th>
@@ -15,16 +24,18 @@
             </thead>
             <tbody>
         
-                @foreach ($socialicones as $item)
+                @foreach ($portfolioimgs as $item)
                     <tr>
-                        <th scope="row">{{$item->}}</th>
-                        <td>{{$item->}}</td>
-                        <td>{{$item->}}</td>
-                        <td>{{$item->}}</td>
-                        <td><a href="socialicones/{id}/edit">Edit</a></td>
+                        <th scope="row">{{$item->id}}</th>
+                        <td>{{$item->src}}</td>
+                        <td>{{$item->name}}</td>
+                        <td>{{$item->p}}</td>
+                        <td>{{$item->href}}</td>
+                        <td>{{$item->filter}}</td>
+                        <td><a href="/portfolioimgs/{{$item->id}}/edit" class="btn btn-warning">Edit</a></td>
         
                         <td>
-                          <form action="" method="POST">
+                          <form action="/portfolioimgs/{{$item->id}}" method="POST">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">Delete</button>
@@ -32,7 +43,7 @@
                         </td>
         
                       <td>
-                          <a class="btn btn-success" href="">show more</a>
+                          <a class="btn btn-success" href="/portfolioimgs/{{$item->id}}">Show more</a>
                       </td>
                     </tr>
                 @endforeach
